@@ -14,7 +14,7 @@ var doneT = document.querySelector("#doneT");
 var totalTasks = document.querySelector("#total_tasks");
 var totalDone = document.querySelector("#total_done");
 var html = "";
-var i = 3;
+var i = taskList.length;
 
 function setDate () {
     const date = new Date();
@@ -30,27 +30,29 @@ function taskListRefresh () {
     taskList_doneT = taskList.filter(A => A.done == true);
     taskList_doneF = taskList.filter(A => A.done == false);
     html = "";
+    // Aquí se podría agregar un IF para que si la lista de abajo está vacia (taskList_doneT.length == 0), cargue un mensaje en la sección correspondiente.
     taskList_doneT.forEach(A => {
         html +=
         `
             <div class="task">
                 <div class="task_id">${A.id}</div>
                 <div class="task_name">${A.name}</div>
-                <div class="task_ok btn"><img src="assets/img/caja.png" class="btn_img" id="btn_status" alt="Terminado" onclick="changeTaskStatus(${A.id})"></div>
-                <div class="task_delete btn"><img src="assets/img/basura.png" class="btn_img" id="btn_delete" alt="Eliminar" onclick="deleteTask(${A.id})"></div>
+                <div class="task_ok btn"><img src="assets/img/caja.png" class="btn_img" id="btn_status" title="Marcar como pendiente" alt="Terminado" onclick="changeTaskStatus(${A.id})"></div>
+                <div class="task_delete btn"><img src="assets/img/basura.png" class="btn_img" id="btn_delete" title= "Borrar tarea" alt="Eliminar" onclick="deleteTask(${A.id})"></div>
             </div>
         `;
     });
     doneT.innerHTML = `<h3>Tareas terminadas</h3>${html}`;
     html = "";
+    // Aquí se podría agregar un IF para que si la lista de abajo está vacia (taskList_doneF.length == 0), cargue un mensaje en la sección correspondiente.
     taskList_doneF.forEach(A => {
         html +=
         `
             <div class="task">
                 <div class="task_id">${A.id}</div>
                 <div class="task_name">${A.name}</div>
-                <div class="task_notOk btn"><img src="assets/img/cuadrado.png" class="btn_img" id="btn_status" alt="Pendiente" onclick="changeTaskStatus(${A.id})"></div>
-                <div class="task_delete btn"><img src="assets/img/basura.png" class="btn_img" id="btn_delete" alt="Eliminar" onclick="deleteTask(${A.id})"></div>
+                <div class="task_notOk btn"><img src="assets/img/cuadrado.png" class="btn_img" id="btn_status" title="Marcar como terminada" alt="Pendiente" onclick="changeTaskStatus(${A.id})"></div>
+                <div class="task_delete btn"><img src="assets/img/basura.png" class="btn_img" id="btn_delete" title="Borrar tarea" alt="Eliminar" onclick="deleteTask(${A.id})"></div>
             </div>
         `;
     });
