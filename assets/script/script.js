@@ -8,8 +8,8 @@ var doneF = document.querySelector("#doneF");
 var doneT = document.querySelector("#doneT");
 var totalTasks = document.querySelector("#total_tasks");
 var totalDone = document.querySelector("#total_done");
-var btnDone = document.querySelector("#btn_status");
-var btnDelete = document.querySelector("#btn_delete");
+// var btnDone = document.querySelector("#btn_status");
+// var btnDelete = document.querySelector("#btn_delete");
 var html = "";
 var i = 3;
 
@@ -25,7 +25,7 @@ function taskListRefresh () {
             <div class="task">
                 <div class="task_id">${A.id}</div>
                 <div class="task_name">${A.name}</div>
-                <div class="task_ok btn"><img src="assets/img/caja.png" class="btn_img" id="btn_status" alt="Terminado"></div>
+                <div class="task_ok btn"><img src="assets/img/caja.png" class="btn_img" id="btn_status" alt="Terminado" onclick="changeTaskStatus(${A.id})"></div>
                 <div class="task_delete btn"><img src="assets/img/basura.png" class="btn_img" id="btn_delete" alt="Eliminar" onclick="deleteTask(${A.id})"></div>
             </div>
         `
@@ -38,7 +38,7 @@ function taskListRefresh () {
                 <div class="task">
                     <div class="task_id">${A.id}</div>
                     <div class="task_name">${A.name}</div>
-                    <div class="task_notOk btn"><img src="assets/img/cuadrado.png" class="btn_img" id="btn_status" alt="Pendiente"></div>
+                    <div class="task_notOk btn"><img src="assets/img/cuadrado.png" class="btn_img" id="btn_status" alt="Pendiente" onclick="changeTaskStatus(${A.id})"></div>
                     <div class="task_delete btn"><img src="assets/img/basura.png" class="btn_img" id="btn_delete" alt="Eliminar" onclick="deleteTask(${A.id})"></div>
                 </div>
         `
@@ -64,11 +64,15 @@ function deleteTask (id) {
     // taskListRefresh();
 }
 
-function changeTaskStatus () {
-
+function changeTaskStatus (idT) {
+    let indexChange = taskList.findIndex(T => T.id == idT);
+    if (taskList[indexChange].done == false) {
+        taskList[indexChange].done = true;
+    } else {
+        taskList[indexChange].done = false;
+    }
+    taskListRefresh();
 }
 
 window.addEventListener("load", taskListRefresh);
 btnAdd.addEventListener("click", addNewTask);
-btnDelete.addEventListener("click", deleteTask);
-btnDone.addEventListener("click", changeTaskStatus);
