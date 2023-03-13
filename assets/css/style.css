@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bor {
+    border-radius: 20px;
+    padding: 20px;
+    width: 70%;
+    margin-top: 2vh;
+}
+
+.btn {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_img {
+    width: 70%;
+    height: 70%;
+    opacity: 0.7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toDoList {
+    justify-content: center;
+    background-color: #94C5CC;
+    min-width: 80vw;
+    max-width: 95vw;
+    min-height: 90vh;
+    margin: 2vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1, h3 {
+    margin-top: 0;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.section_dateSummary {
+    background-color: #F0CF65;
+    font-weight: 500;
+}
+
+.date {
+    text-align: end;
+    opacity: 0.6;
+    padding-bottom: 8px;
+}
+
+.summary {
+    padding-right: 10px;
+    font-size: large;
+}
+
+.section_newTask {
+    background-color: #023047;
+}
+
+.newTask {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input {
+    width: 80%;
+    border-radius: 20px;
+}
+
+.btn_add {
+    background-color: #219EBC;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr 1fr;
+    align-items: center;
+    text-align: start;
+    padding: 5px 0;
+}
+
+.task_notOk {
+    background-color: gold;
+}
+
+.task_ok {
+    background-color: greenyellow;
+}
+
+.task_delete {
+    background-color: tomato;
+}
+
+.section_pending {
+    background-color: #320E3B;
+    color: whitesmoke;
+}
+
+.section_done {
+    background-color: #AC80A0;
+}

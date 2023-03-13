@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="shortcut icon" href="assets/img/lista.gif" type="image/x-icon">
+    <title>JavaScript - Lista de Tareas</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="toDoList bor">
+            <h1>Lista de Tareas</h1>
+            <section class="section_dateSummary bor">
+                <div class="date">
+                    <span id="dayName">Domingo </span>
+                    <span id="day">12 </span>
+                    <span id="month">Marzo </span>
+                    <span id="year">2023</span>
+                </div>
+                    
+                <div class="summary">
+                    <div class="total_tasks">Total tareas: <span id="total_tasks">3</span></div>
+                    <div class="total_done">Total terminadas: <span id="total_done">1</span></div>
+                </div>
+            </section>
+            <section class="section_newTask bor">
+                <h3>Ingresa una nueva tarea</h3>
+                <div class="newTask">
+                    <input type="text">
+                    <div class="btn_add btn"><img src="assets/img/mas.png" class="btn_img" alt="Agregar tarea"></div>
+                </div>
+            </section>
+            <section class="section_pending bor">
+                <h3>Tareas pendientes</h3>
+                <div class="task">
+                    <div class="task_id">2</div>
+                    <div class="task_name">Estudiar para la prueba</div>
+                    <div class="task_notOk btn"><img src="assets/img/cuadrado.png" class="btn_img" alt="Pendiente"></div>
+                    <div class="task_delete btn"><img src="/assets/img/basura.png" class="btn_img" alt="Eliminar"></div>
+                </div>
+
+                <div class="task">
+                    <div class="task_id">3</div>
+                    <div class="task_name">Regar las plantas</div>
+                    <div class="task_notOk btn"><img src="assets/img/cuadrado.png" class="btn_img" alt="Pendiente"></div>
+                    <div class="task_delete btn"><img src="assets/img/basura.png" class="btn_img" alt="Eliminar"></div>
+                </div>
+            </section>
+            <section class="section_done bor">
+                <h3>Tareas terminadas</h3>
+                <div class="task">
+                    <div class="task_id">1</div>
+                    <div class="task_name">Ir al supermercado</div>
+                    <div class="task_ok btn"><img src="assets/img/caja.png" class="btn_img" alt="Terminado"></div>
+                    <div class="task_delete btn"><img src="assets/img/basura.png" class="btn_img" alt="Eliminar"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="assets/script/script.js"></script>
+</body>
+
+</html>
