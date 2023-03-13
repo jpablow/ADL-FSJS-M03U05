@@ -79,6 +79,7 @@ h1, h3 {
 input {
     width: 80%;
     border-radius: 20px;
+    font-size: medium;
 }
 
 .btn_add {
