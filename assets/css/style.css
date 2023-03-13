@@ -18,6 +18,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.25s;
 }
 
 .btn:hover {
@@ -49,7 +51,8 @@ body {
     justify-content: flex-start;
 }
 
-h1, h3 {
+h1,
+h3 {
     margin-top: 0;
     text-align: center;
     color: whitesmoke;
@@ -87,11 +90,7 @@ input {
 }
 
 .btn_add {
-    background-color: #219EBC;
-}
-
-.btn_add:hover {
-    opacity: 0.5;
+    background-color: #6efafb;
 }
 
 .task {
@@ -111,7 +110,7 @@ input {
 }
 
 .task_delete {
-    background-color: tomato;
+    background-color: red;
 }
 
 .section_pending {
@@ -121,4 +120,5 @@ input {
 
 .section_done {
     background-color: #AC80A0;
+    color: white;
 }
