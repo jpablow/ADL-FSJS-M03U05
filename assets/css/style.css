@@ -20,6 +20,10 @@ body {
     align-items: center;
 }
 
+.btn:hover {
+    opacity: 0.5;
+}
+
 .btn_img {
     width: 70%;
     height: 70%;
@@ -84,6 +88,10 @@ input {
 
 .btn_add {
     background-color: #219EBC;
+}
+
+.btn_add:hover {
+    opacity: 0.5;
 }
 
 .task {
