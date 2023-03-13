@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    /* background-color: whitesmoke; */
-    background-image: url(assets/img/wp_002.jpg);
+    background-color: whitesmoke;
+    /* background-image: url(assets/img/wp_002.jpg); */
     opacity: 0.95;
     font-family: 'Montserrat', sans-serif;
 }
