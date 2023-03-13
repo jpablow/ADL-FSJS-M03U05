@@ -8,8 +8,6 @@ var doneF = document.querySelector("#doneF");
 var doneT = document.querySelector("#doneT");
 var totalTasks = document.querySelector("#total_tasks");
 var totalDone = document.querySelector("#total_done");
-// var btnDone = document.querySelector("#btn_status");
-// var btnDelete = document.querySelector("#btn_delete");
 var html = "";
 var i = 3;
 
@@ -59,9 +57,11 @@ function addNewTask () {
     }
 }
 
-function deleteTask (id) {
-    console.log(id);
-    // taskListRefresh();
+function deleteTask (idT) {
+    console.log(idT);
+    let indexDelete = taskList.findIndex(T => T.id == idT);
+    taskList.splice(indexDelete, 1,);
+    taskListRefresh();
 }
 
 function changeTaskStatus (idT) {
